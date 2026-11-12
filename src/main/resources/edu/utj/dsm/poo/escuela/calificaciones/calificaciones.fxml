@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="481" prefWidth="600.0" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utj.dsm.poo.escuela.controlador.CalificacionesController">
+   <children>
+      <Label layoutX="250.0" layoutY="8.0" text="Calificaciones" style="-fx-font-size: 14px;" />
+      <TableView fx:id="tabla" layoutY="35.0" prefHeight="197.0" prefWidth="600.0">
+        <columns>
+          <TableColumn prefWidth="50.0" text="ID" />
+          <TableColumn prefWidth="100.0" text="Matrícula" />
+          <TableColumn prefWidth="170.0" text="Materia" />
+          <TableColumn prefWidth="80.0" text="Periodo" />
+          <TableColumn prefWidth="100.0" text="Calificación" />
+          <TableColumn prefWidth="100.0" text="Resultado" />
+        </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="245.0" text="Id" />
+      <TextField fx:id="txtId" layoutX="20.0" layoutY="262.0" prefHeight="25.0" prefWidth="170.0" />
+      <Label fx:id="lblErrorId" alignment="TOP_LEFT" layoutX="20" layoutY="288" prefHeight="16" prefWidth="170" style="-fx-text-fill: #d32f2f; -fx-font-size: 9px;" wrapText="true" />
+      <Label layoutX="205.0" layoutY="245.0" text="Alumno" />
+      <ComboBox fx:id="cmbMatricula" layoutX="205.0" layoutY="262.0" prefHeight="25.0" prefWidth="170.0" promptText="Alumno" />
+      <Label fx:id="lblErrorMatricula" alignment="TOP_LEFT" layoutX="205" layoutY="288" prefHeight="16" prefWidth="170" style="-fx-text-fill: #d32f2f; -fx-font-size: 9px;" wrapText="true" />
+      <Label layoutX="20.0" layoutY="307.0" text="Materia" />
+      <ComboBox fx:id="cmbMateria" layoutX="20.0" layoutY="324.0" prefHeight="25.0" prefWidth="170.0" promptText="Materia" />
+      <Label fx:id="lblErrorMateria" alignment="TOP_LEFT" layoutX="20" layoutY="350" prefHeight="16" prefWidth="170" style="-fx-text-fill: #d32f2f; -fx-font-size: 9px;" wrapText="true" />
+      <Label layoutX="205.0" layoutY="307.0" text="Periodo (ej. 2026-1)" />
+      <TextField fx:id="txtPeriodo" layoutX="205.0" layoutY="324.0" prefHeight="25.0" prefWidth="170.0" />
+      <Label fx:id="lblErrorPeriodo" alignment="TOP_LEFT" layoutX="205" layoutY="350" prefHeight="16" prefWidth="170" style="-fx-text-fill: #d32f2f; -fx-font-size: 9px;" wrapText="true" />
+      <Label layoutX="20.0" layoutY="369.0" text="Calificación (0-100)" />
+      <TextField fx:id="txtValor" layoutX="20.0" layoutY="386.0" prefHeight="25.0" prefWidth="170.0" />
+      <Label fx:id="lblErrorValor" alignment="TOP_LEFT" layoutX="20" layoutY="412" prefHeight="16" prefWidth="170" style="-fx-text-fill: #d32f2f; -fx-font-size: 9px;" wrapText="true" />
+      <ImageView fx:id="imgFoto" fitHeight="140.0" fitWidth="190.0" layoutX="400.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="400.0" layoutY="392.0" mnemonicParsing="false" onAction="#onSeleccionarImagen" text="Subir foto" />
+      <Button fx:id="btnNuevo" layoutX="20.0" layoutY="436.0" mnemonicParsing="false" onAction="#onNuevo" text="Nuevo" />
+      <Button fx:id="btnValidar" layoutX="100.0" layoutY="436.0" mnemonicParsing="false" onAction="#onValidar" text="Validar" />
+      <Button fx:id="btnGuardar" layoutX="180.0" layoutY="436.0" mnemonicParsing="false" onAction="#onGuardar" text="Guardar" />
+      <Button fx:id="btnEditar" layoutX="260.0" layoutY="436.0" mnemonicParsing="false" onAction="#onEditar" text="Editar" />
+      <Button fx:id="btnEliminar" layoutX="340.0" layoutY="436.0" mnemonicParsing="false" onAction="#onEliminar" text="Borrar" />
+      <Button fx:id="btnLimpiar" layoutX="420.0" layoutY="436.0" mnemonicParsing="false" onAction="#onLimpiar" text="Limpiar" />
+   </children>
+</AnchorPane>

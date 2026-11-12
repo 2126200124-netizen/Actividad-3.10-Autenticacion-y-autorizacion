@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="380.0" spacing="12.0" style="-fx-padding: 20;" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utj.dsm.poo.escuela.controlador.AutenticacionController">
+   <children>
+      <Label text="Sistema de Gestión Escolar" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+      <Label text="Inicio de sesión" style="-fx-font-size: 14px;" />
+      <VBox maxWidth="260.0" spacing="4.0">
+         <children>
+            <Label text="ID de usuario o correo electrónico" />
+            <TextField fx:id="txtUsuario" onAction="#onEntrar" promptText="Ej. 1 o admin@escuela.com" />
+         </children>
+      </VBox>
+      <VBox maxWidth="260.0" spacing="4.0">
+         <children>
+            <Label text="Contraseña" />
+            <PasswordField fx:id="txtClave" onAction="#onEntrar" promptText="Contraseña" />
+         </children>
+      </VBox>
+      <Label fx:id="lblError" maxWidth="260.0" minHeight="36.0" wrapText="true" style="-fx-text-fill: #d32f2f;" />
+      <Button fx:id="btnEntrar" defaultButton="true" onAction="#onEntrar" prefWidth="180.0" text="Entrar" />
+      <Button onAction="#onCerrar" prefWidth="180.0" text="Cerrar aplicación" />
+   </children>
+</VBox>

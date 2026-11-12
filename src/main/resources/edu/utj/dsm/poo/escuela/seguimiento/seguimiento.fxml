@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10.0" prefWidth="780.0" style="-fx-padding: 10;" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utj.dsm.poo.escuela.controlador.SeguimientoController">
+   <children>
+      <HBox alignment="CENTER_LEFT" spacing="15.0">
+         <children>
+            <Label text="Seguimiento académico (calificación + asistencia)" style="-fx-font-size: 14px;" />
+            <Button mnemonicParsing="false" onAction="#onActualizar" text="Actualizar" />
+         </children>
+      </HBox>
+      <TableView fx:id="tabla" prefHeight="420.0" prefWidth="780.0">
+        <columns>
+          <TableColumn prefWidth="90.0" text="Matrícula" />
+          <TableColumn prefWidth="160.0" text="Alumno" />
+          <TableColumn prefWidth="140.0" text="Materia" />
+          <TableColumn prefWidth="70.0" text="Periodo" />
+          <TableColumn prefWidth="90.0" text="Calificación" />
+          <TableColumn prefWidth="80.0" text="Resultado" />
+          <TableColumn prefWidth="60.0" text="Clases" />
+          <TableColumn prefWidth="90.0" text="% Asistencia" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>

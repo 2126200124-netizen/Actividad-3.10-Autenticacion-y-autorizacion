@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+
+<BorderPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/13" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.utj.dsm.poo.escuela.controlador.PrincipalController">
+   <top>
+      <HBox alignment="CENTER_LEFT" spacing="10.0" style="-fx-padding: 10; -fx-background-color: #eeeeee;">
+         <children>
+            <Label text="Menú" style="-fx-font-weight: bold;" />
+            <MenuBar style="-fx-background-color: transparent;">
+              <menus>
+                <Menu text="Personas"><items>
+                  <MenuItem fx:id="miAlumnos" onAction="#onAlumnos" text="Alumnos" />
+                  <MenuItem fx:id="miDocentes" onAction="#onDocentes" text="Docentes" />
+                  <MenuItem fx:id="miAdministradores" onAction="#onAdministradores" text="Administradores" />
+                </items></Menu>
+                <Menu text="Académico"><items>
+                  <MenuItem fx:id="miMaterias" onAction="#onMaterias" text="Materias" />
+                  <MenuItem fx:id="miCalificaciones" onAction="#onCalificaciones" text="Calificaciones" />
+                  <MenuItem fx:id="miAsistencia" onAction="#onAsistencia" text="Asistencia" />
+                  <MenuItem fx:id="miSeguimiento" onAction="#onSeguimiento" text="Seguimiento" />
+                </items></Menu>
+                <Menu text="Escuela"><items>
+                  <MenuItem fx:id="miDepartamentos" onAction="#onDepartamentos" text="Departamentos" />
+                  <MenuItem fx:id="miAulas" onAction="#onAulas" text="Aulas" />
+                  <MenuItem fx:id="miHorarios" onAction="#onHorarios" text="Horarios" />
+                </items></Menu>
+              </menus>
+            </MenuBar>
+            <Region HBox.hgrow="ALWAYS" />
+            <Label fx:id="lblUsuario" style="-fx-font-weight: bold;" />
+            <Button onAction="#onCerrarSesion" text="Cerrar sesión" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <ScrollPane fx:id="contenedor" fitToWidth="true">
+         <content>
+            <Label text="Selecciona un módulo del menú" style="-fx-padding: 20;" />
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
